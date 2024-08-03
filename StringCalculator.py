@@ -1,6 +1,4 @@
 def add(input):
-  delim = ','
-  sum = 0
   if(input[0] == '/'):
     ind = input.find('\n')
     delim = input[2:ind+1]
@@ -8,10 +6,13 @@ def add(input):
     if delim.length() > 0:
       delim.erase(0,1)
       delim.erase(delim.length()-1,1)
+  else:
+    delim = ','
+  sum = 0
   numbers = input.split([delim, '\n'])
   
   for item in numbers:
     if int(item) >= 1000:
       continue
-    sum += item
+    sum += int(item)
   return sum
