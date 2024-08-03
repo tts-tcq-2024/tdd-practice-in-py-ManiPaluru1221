@@ -1,4 +1,4 @@
-def func(input)
+def func(input):
   delim = ','
   if(input[0] == '/'):
     ind = input.find('\n')
