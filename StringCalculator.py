@@ -1,3 +1,5 @@
+#import re
+
 def func(input):
   delim = ','
   if(input[0] == '/'):
@@ -7,13 +9,15 @@ def func(input):
     if len(delim) > 0:
       delim.erase(0,1)
       delim.erase(len(delim)-1,1)
-  return delim
+  return delim, input
 
 def add(input):
   if(input == "" or input == "0"):
     return 0
-  delim = func(input)
-  numbers = input.split([delim, '\n'])
+  delim, input = func(input)
+  #numbers = input.split([delim, '\n'])
+  #numbers = re.split(r',|\n', my_str_2)
+  numbers = input.replace(delim, '\n').split('\n')
   sum = 0
   for item in numbers:
     if int(item) >= 1000:
