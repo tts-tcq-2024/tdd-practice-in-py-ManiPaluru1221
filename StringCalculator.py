@@ -7,8 +7,7 @@ def func(input):
     delim = input[2:ind+1]
     input = input[ind+1:]
     if len(delim) > 0:
-      delim.erase(0,1)
-      delim.erase(len(delim)-1,1)
+      delim = delim[1:len(delim)-1]
   return delim, input
 
 def add(input):
