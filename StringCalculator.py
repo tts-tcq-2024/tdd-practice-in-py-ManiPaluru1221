@@ -11,8 +11,8 @@ def func(input):
   return delim, input
 
 def add(input):
-  if(input == "" or input == "0"):
-    return 0
+  #if(input == "" or input == "0"):
+  #  return 0
   delim, input = func(input)
   #numbers = input.split([delim, '\n'])
   #numbers = re.split(r',|\n', my_str_2)
